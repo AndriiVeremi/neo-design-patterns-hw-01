@@ -1,6 +1,5 @@
 import { AbstractBook } from "./AbstractBook";
 import { Author } from "./Author";
-import { Book } from "./Book";
 
 export class EBook extends AbstractBook {
   private author: Author;
@@ -10,7 +9,7 @@ export class EBook extends AbstractBook {
     super(title, year);
     this.author = author;
     this.url = url;
-    author.addBook(this as unknown as Book);
+    author.addBook(this); 
   }
 
   getAuthor(): Author {

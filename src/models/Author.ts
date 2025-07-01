@@ -1,8 +1,8 @@
-import { Book } from "./Book";
+import { AbstractBook } from "./AbstractBook";
 
 export class Author {
   private name: string;
-  private books: Book[] = [];
+  private books: AbstractBook[] = [];
 
   constructor(name: string) {
     this.name = name;
@@ -12,11 +12,11 @@ export class Author {
     return this.name;
   }
 
-  addBook(book: Book): void {
+  addBook(book: AbstractBook): void {
     this.books.push(book);
   }
 
-  getBooks(): Book[] {
+  getBooks(): AbstractBook[] {
     return [...this.books];
   }
 }

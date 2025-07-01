@@ -7,7 +7,7 @@ export class Book extends AbstractBook {
   constructor(title: string, year: number, author: Author) {
     super(title, year);
     this.author = author;
-    author.addBook(this);
+    author.addBook(this); 
   }
 
   getAuthor(): Author {
